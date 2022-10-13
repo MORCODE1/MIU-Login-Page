@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:ital,wght@0,600;0,700;1,600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    background: linear-gradient(90deg, rgba(6,219,231,1) 0%, rgba(10,78,125,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 70px;
+}
+
+.form-wrapper{
+    max-width: 670px;
+    margin: 0 auto;
+}
+
+.form-container{
+    display: flex;
+    align-items: stretch;
+    color: #002333;
+}
+
+.form-left{
+    background: url('img/IMG_3063.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+    padding: 20px;
+    position: relative;
+}
+
+.form-left::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(240deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)100%);
+}
+
+.content{
+    color: #ffffff;
+    z-index: 9;
+}
+
+.content h3{
+    font-size: 40px;
+    line-height: 45px;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 100px;
+    letter-spacing: -0.5;
+}
+
+.content h3::after{
+    content: '';
+    width: 80%;
+    height: 6px;
+    position: absolute;
+    background:rgb(169, 36, 80);
+    bottom: -25%;
+    left: 0;
+}
+
+.content p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.form-right{
+    background: #ffffff;
+    flex-basis: 50%;
+    padding: 50px 20px;
+}
+
+.login-form{
+    padding: 18px;
+}
+
+.username .label{
+    color: rgb(92, 90, 90);
+}
+
+.username input{
+    padding: 8px;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'poppins';
+    font-weight: 500;
+    color: grey;
+    display: inline-block;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(220, 222, 225);
+}
+
+.username input:focus{
+    outline: none;
+    border-color: rgb(92, 90, 90);
+}
+
+.btn{
+    width: 100%;
+    display: inline-block;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    background-color:rgb(169, 36, 80);
+    padding: 0 20px;
+    height: 40px;
+    border: 1px solid rgb(169, 36, 80);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.btn:hover{
+    opacity: 0.9; 
+    background: rgb(140, 23, 62);  
+}
+
+.footer{
+    padding: 0 18px;
+}
+
+.fp-link{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(92, 90, 90); 
+    text-decoration: none;
+}
+
+.fp-link:hover{
+    color: rgb(169, 36, 80) ;
+}
+
+
+
+
+/*responsive*/
+@media (max-width:678px) {
+    body{
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-wrapper{
+        max-width: 400px;
+        padding-top: 20px;
+    }
+
+    .form-container{
+        position: relative;
+    }
+
+    .form-left .content{
+        display: none;
+    }
+
+    .form-left{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .form-left::before{
+        background: linear-gradient(135deg, rgba(6,219,231,1) 10%, rgba(10,78,125,1) 100%);
+        opacity: 0.5;
+    }
+    .form-right{
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(245, 245, 245, 0.2);
+    }
+    .username .label{
+        color: #002333;
+    }
+
+    .fp-link{
+        color: #002333;
+    }
+}
